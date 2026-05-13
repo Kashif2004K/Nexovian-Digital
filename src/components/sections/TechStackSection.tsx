@@ -18,7 +18,10 @@ const TECH_ITEMS = [
   { name: "PostgreSQL", category: "Database" },
   { name: "OpenAI", category: "AI" },
   { name: "LangChain", category: "AI" },
+<<<<<<< HEAD
   { name: "n8n", category: "Automation" },
+=======
+>>>>>>> d017d29d323ae0bb118946b995f50fbb95329544
   { name: "Power BI", category: "Analytics" },
   { name: "Zapier", category: "Automation" },
   { name: "Make.com", category: "Automation" },

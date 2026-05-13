@@ -230,6 +230,9 @@ export default function ContactPageContent() {
               { label: "Email", value: "info@nexoviandigital.com", icon: "✉️" },
               { label: "Response Time", value: "Under 24 hours", icon: "⚡" },
               { label: "Availability", value: "Mon - Sat, 9am - 6pm", icon: "🕐" },
+              { label: "Email", value: "hello@nexoviandigital.agency", icon: "✉️" },
+              { label: "Response Time", value: "Under 24 hours", icon: "⚡" },
+              { label: "Availability", value: "Mon - Fri, 9am - 6pm", icon: "🕐" },
             ].map((info) => (
               <div key={info.label} className="glass-card text-center !p-5">
                 <div className="text-xl mb-2">{info.icon}</div>

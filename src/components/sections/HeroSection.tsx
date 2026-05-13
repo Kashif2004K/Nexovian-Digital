@@ -82,8 +82,13 @@ export default function HeroSection() {
             </svg>
             Deploy Infrastructure
           </Link>
+<<<<<<< HEAD
           <Link href="/contact" className="btn-secondary" id="hero-cta-secondary">
             Get Started
+=======
+          <Link href="/portfolio" className="btn-secondary" id="hero-cta-secondary">
+            Explore Case Studies
+>>>>>>> d017d29d323ae0bb118946b995f50fbb95329544
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>

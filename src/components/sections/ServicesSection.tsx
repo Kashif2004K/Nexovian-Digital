@@ -44,8 +44,13 @@ export default function ServicesSection() {
       <div className="container-default relative z-10">
         <SectionHeading
           label="// Core Services"
+<<<<<<< HEAD
           title="What We Offer"
           description="We provide four key services to help your business grow: professional web development, search engine optimization, AI automation, and data analytics."
+=======
+          title="Four Pillars of Digital Transformation"
+          description="We don't just deliver projects — we deploy systems that generate revenue, automate operations, and scale your business autonomously."
+>>>>>>> d017d29d323ae0bb118946b995f50fbb95329544
         />
 
         <motion.div
