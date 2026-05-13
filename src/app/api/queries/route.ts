@@ -1,5 +1,6 @@
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
+import { getSupabaseAdmin } from "@/lib/supabase-admin";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -36,6 +37,27 @@ export async function POST(request: NextRequest) {
         { message: "Message must be at least 10 characters long" },
         { status: 400 }
       );
+    }
+
+    // Save query to Supabase
+    try {
+      const supabaseAdmin = getSupabaseAdmin();
+      const { data: dbResult, error: dbError } = await supabaseAdmin
+        .from("queries")
+        .insert({
+          name: body.name,
+          email: body.email,
+          message: body.message,
+          created_at: new Date().toISOString(),
+        });
+
+      if (dbError) {
+        console.error("Error saving query to Supabase:", dbError);
+        // Continue with email sending even if DB save fails
+      }
+    } catch (supabaseError) {
+      console.warn("Supabase error (continuing with email):", supabaseError);
+      // Continue with email sending
     }
 
     // Send email to company inbox
